@@ -37,6 +37,8 @@ find_library (MIR_COMMON NAMES mircommon DOC "Mir common library")
 find_library (EGL NAMES EGL DOC "EGL library")
 find_library (XKB NAMES xkbcommon DOC "Xkb common library")
 
+# TODO: Verify the mirclient version (SDL requires >= 0.26)
+
 include (FindPackageHandleStandardArgs)
 find_package_handle_standard_args (Mir REQUIRED_VARS MIR_CLIENT MIR_COMMON EGL XKB MIR_CLIENT_INCLUDE_DIR MIR_COMMON_INCLUDE_DIR FAIL_MESSAGE "Could NOT find Mir display server")
 if (MIR_FOUND)
